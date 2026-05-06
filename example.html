@@ -1,1 +1,102 @@
-
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 문자 인코딩 설정 -->
+    <meta charset="UTF-8">
+    <!-- 반응형 디자인을 위한 뷰포트 설정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 페이지 제목 -->
+    <title>My First e-ICON Web App</title>
+    
+    <!-- CSS 스타일 정의 -->
+    <style>
+        /* 전체 페이지 스타일 */
+        body {
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: lightblue;
+            /* 부드러운 배경색 변화 */
+            transition: background-color 0.3s ease;
+        }
+        
+        /* 컨테이너 스타일 */
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* 제목 스타일 */
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+        
+        /* 버튼 스타일 */
+        button {
+            padding: 12px 30px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            /* 버튼 호버 효과를 위한 전환 */
+            transition: background-color 0.2s;
+        }
+        
+        /* 버튼 호버 시 스타일 */
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        /* 버튼 클릭 시 스타일 */
+        button:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+    <!-- 메인 컨테이너 -->
+    <div class="container">
+        <!-- 제목 -->
+        <h1>My First e-ICON Web App</h1>
+        
+        <!-- 배경색을 바꾸는 버튼 -->
+        <button onclick="changeBackgroundColor()">배경색 바꾸기</button>
+    </div>
+    
+    <!-- JavaScript 코드 -->
+    <script>
+        // 배경색을 바꾸는 함수
+        function changeBackgroundColor() {
+            // 무작위 색상을 만드는 배열
+            const colors = [
+                'lightblue',
+                'lightcoral',
+                'lightgreen',
+                'lightyellow',
+                'lightpink',
+                'lightcyan',
+                'lightgoldenrodyellow',
+                'lightseagreen',
+                'lightsalmon',
+                'lightsteelblue'
+            ];
+            
+            // 무작위로 색상 선택
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            
+            // body 요소의 배경색 변경
+            document.body.style.backgroundColor = randomColor;
+        }
+    </script>
+</body>
+</html>
